@@ -76,11 +76,37 @@ The project uses the classic Iris dataset:
 
 The project leverages MLflow for comprehensive experiment tracking and model management:
 
+### Experiment Dashboard
+![MLflow Experiment Runs](docs/images/mlflow_runs.png)
+*Overview of all experiment runs showing model performance and training times*
+
+### Model Performance Tracking
+
+#### Random Forest Metrics
+![Random Forest MLflow Metrics](docs/images/mlflow_rf_metrics.png)
+*Detailed metrics for Random Forest model showing accuracy, precision, recall, and feature importance*
+
+Parameters:
+- n_estimators: 100
+- max_depth: 10
+- criterion: gini
+- Feature importance analysis shows petal dimensions are most significant
+
+#### Support Vector Machine Metrics
+![SVM MLflow Metrics](docs/images/mlflow_svm_metrics.png)
+*Performance metrics for SVM model demonstrating 96.7% accuracy across all metrics*
+
+Parameters:
+- kernel: rbf
+- gamma: scale
+- random_state: 42
+
 ### Latest Experiment Details
 - Experiment name: iris-classification-pipeline
 - Best performing model: Support Vector Machine (96.7% accuracy)
 - Total runs tracked: 6 runs
 - Registered models: iris-classifier-best (v2)
+- Latest run duration: 4.3s
 
 ### Tracked Components
 - Model parameters and hyperparameters
