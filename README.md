@@ -1,103 +1,185 @@
-# MLOps Assignment 1
+# Iris Classification MLOps Pipeline
 
-This project demonstrates comprehensive MLOps practices including model training, experiment tracking with MLflow, and model registry. It implements a complete machine learning pipeline for iris flower classification.
+This project implements a comprehensive MLOps pipeline for the Iris flower classification problem, showcasing best practices in machine learning operations including experiment tracking, model versioning, and automated pipeline execution.
 
 ## Project Structure
 
 ```
 mlops-assignment-1/
-├── data/           # Dataset files and train/test splits
-├── notebooks/      # Jupyter notebooks for exploration and analysis
+├── data/                    # Training and testing datasets
+│   ├── X_test.npy
+│   ├── X_train.npy
+│   ├── y_test.npy
+│   └── y_train.npy
+├── models/                  # Saved model files
+│   ├── logistic_regression_model.pkl
+│   ├── random_forest_model.pkl
+│   └── support_vector_machine_model.pkl
+├── notebooks/              # Jupyter notebooks for exploration and training
 │   ├── 01_data_exploration.ipynb
 │   └── 02_model_training.ipynb
-├── src/           # Source code for models and utilities
-│   ├── utils.py
+├── results/                # Visualization and results
+│   ├── correlation_heatmap.png
+│   ├── iris_pairplot.png
+│   ├── model_comparison.png
+│   └── *_confusion_matrix.png
+├── src/                    # Source code
 │   ├── logistic_regression.py
+│   ├── mlflow_config.py
 │   ├── random_forest.py
 │   ├── svm.py
-│   └── mlflow_config.py
-├── models/        # Saved trained models
-├── results/       # Results, plots, and outputs
-└── README.md      # Project documentation
+│   └── utils.py
+├── mlruns/                 # MLflow tracking files
+├── requirements.txt        # Project dependencies
+└── run_pipeline.py        # Main pipeline execution script
 ```
 
 ## Dataset
 
-This project uses the **Iris dataset**, a classic dataset for classification tasks containing:
+The project uses the classic Iris dataset:
 - **150 samples** of iris flowers
 - **4 features**: sepal length, sepal width, petal length, petal width
-- **3 species**: Setosa, Versicolor, Virginica
-- **Balanced dataset**: 50 samples per species
+- **3 classes**: Setosa, Versicolor, Virginica
+- **Balanced classes**: 50 samples per class
 
-## Models Implemented
+## Models and Performance
 
-1. **Logistic Regression** - Linear classification model with feature scaling
-   - Accuracy: 93.33%
-   - Precision: 93.33%
-   - Recall: 93.33%
-   - F1-Score: 93.33%
+### Support Vector Machine (Latest Run)
+- **Best Performing Model**
+- Accuracy: 96.7%
+- Precision: 96.7%
+- Recall: 96.7%
+- F1 Score: 96.7%
+- Parameters:
+  - Kernel: rbf
+  - Gamma: scale
+  - Random State: 42
 
-2. **Random Forest** - Ensemble method using decision trees
-   - Accuracy: 90.00%
-   - Precision: 90.24%
-   - Recall: 90.00%
-   - F1-Score: 89.97%
-   - Feature importance analysis included
+### Random Forest (Latest Run)
+- Accuracy: 90.0%
+- Precision: 90.2%
+- Recall: 90.0%
+- F1 Score: 90.0%
+- Parameters:
+  - n_estimators: 100
+  - max_depth: 10
+  - min_samples_split: 2
+  - min_samples_leaf: 1
+  - criterion: gini
+  - Feature Importance:
+    - Petal Length: 0.432
+    - Petal Width: 0.437
+    - Sepal Length: 0.116
+    - Sepal Width: 0.015
 
-3. **Support Vector Machine (SVM)** - Kernel-based classification (**Best Model**)
-   - Accuracy: **96.67%**
-   - Precision: 96.97%
-   - Recall: 96.67%
-   - F1-Score: 96.66%
+## MLflow Experiment Tracking
 
-## MLflow Tracking & Experiment Management
+The project leverages MLflow for comprehensive experiment tracking and model management:
 
-### Experiment Setup
-- **Experiment Name**: `iris-classification`
-- **Tracking**: All model parameters, metrics, and artifacts logged
-- **Artifacts**: Confusion matrices, model comparison plots, trained models
+### Latest Experiment Details
+- Experiment name: iris-classification-pipeline
+- Best performing model: Support Vector Machine (96.7% accuracy)
+- Total runs tracked: 6 runs
+- Registered models: iris-classifier-best (v2)
 
-### Logged Information
-- **Parameters**: Model hyperparameters, configuration settings
-- **Metrics**: Accuracy, precision, recall, F1-score for each model
-- **Artifacts**: 
-  - Confusion matrices for each model
-  - Model comparison visualizations
-  - Trained model objects
+### Tracked Components
+- Model parameters and hyperparameters
+- Performance metrics (accuracy, precision, recall, f1-score)
+- Model artifacts and serialized models
+- Feature importance (for Random Forest)
+- Confusion matrices and performance visualizations
+- Run metadata (duration, timestamps, source)
 
-### MLflow UI Access
-```bash
-mlflow ui
-```
-Navigate to `http://localhost:5000` to view experiment tracking dashboard.
+### Visualization Artifacts
+- Model comparison plots
+- Confusion matrices for each model
+- Feature importance plots for Random Forest
+- Data distribution visualizations
 
-## Setup Instructions
+## Setup and Execution
 
-1. **Clone the repository**
+1. **Clone and Install**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/AreebDastgeer/ML_ops_A01.git
    cd mlops-assignment-1
-   ```
-
-2. **Install required packages**
-   ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run data exploration**
+2. **Run Complete Pipeline**
    ```bash
-   jupyter notebook notebooks/01_data_exploration.ipynb
+   python run_pipeline.py
    ```
+   This will:
+   - Load and preprocess data
+   - Train all models
+   - Track experiments in MLflow
+   - Save artifacts and visualizations
 
-4. **Train models and track experiments**
-   ```bash
-   jupyter notebook notebooks/02_model_training.ipynb
-   ```
-
-5. **Launch MLflow UI**
+3. **View MLflow Dashboard**
    ```bash
    mlflow ui
    ```
+   Access the dashboard at `http://localhost:5000`
+
+4. **Explore Notebooks** (Optional)
+   ```bash
+   jupyter notebook notebooks/
+   ```
+   - `01_data_exploration.ipynb`: Dataset analysis
+   - `02_model_training.ipynb`: Model development
+
+## Development Environment
+
+- Python 3.10+
+- Key Dependencies:
+  - scikit-learn
+  - mlflow
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+
+## Visualizations
+
+### Data Analysis
+![Iris Pairplot](results/iris_pairplot.png)
+*Pairplot showing the relationships between different features across Iris species*
+
+![Correlation Heatmap](results/correlation_heatmap.png)
+*Correlation heatmap showing feature relationships*
+
+### Model Performance
+
+#### Support Vector Machine
+![SVM Confusion Matrix](results/support_vector_machine_confusion_matrix.png)
+*Confusion Matrix for Support Vector Machine (Best Model)*
+
+#### Random Forest
+![Random Forest Confusion Matrix](results/random_forest_confusion_matrix.png)
+*Confusion Matrix for Random Forest Classifier*
+
+#### Logistic Regression
+![Logistic Regression Confusion Matrix](results/logistic_regression_confusion_matrix.png)
+*Confusion Matrix for Logistic Regression*
+
+#### Model Comparison
+![Model Comparison](results/model_comparison.png)
+*Performance comparison across all models*
+
+## Future Improvements
+
+1. Implement hyperparameter optimization
+2. Add cross-validation
+3. Experiment with additional models
+4. Add model serving capabilities
+5. Implement CI/CD pipeline
+
+## Repository Information
+
+- Author: Areeb Dastgeer
+- Version: 1.0.0
+- License: MIT
+- Last Updated: September 18, 2025
 
 ## Model Registration & Deployment
 
