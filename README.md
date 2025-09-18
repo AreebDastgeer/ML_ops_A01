@@ -6,7 +6,7 @@ This project implements a comprehensive MLOps pipeline for the Iris flower class
 
 ```
 mlops-assignment-1/
-├── data/                    # Training and testing datasets
+├── data/                    # Training and testing dataset
 │   ├── X_test.npy
 │   ├── X_train.npy
 │   ├── y_test.npy
