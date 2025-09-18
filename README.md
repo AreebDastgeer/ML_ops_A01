@@ -77,13 +77,13 @@ The project uses the classic Iris dataset:
 The project leverages MLflow for comprehensive experiment tracking and model management:
 
 ### Experiment Dashboard
-![MLflow Experiment Runs](docs/images/abc.png)
+![MLflow Experiment Runs](docs/images/abc2.png)
 *Overview of all experiment runs showing model performance and training times*
 
 ### Model Performance Tracking
 
 #### Random Forest Metrics
-![Random Forest MLflow Metrics](docs/images/abc2.png)
+![Random Forest MLflow Metrics](docs/images/abc.png)
 *Detailed metrics for Random Forest model showing accuracy, precision, recall, and feature importance*
 
 Parameters:
