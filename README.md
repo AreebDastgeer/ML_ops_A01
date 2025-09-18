@@ -31,7 +31,7 @@ mlops-assignment-1/
 │   └── utils.py
 ├── mlruns/                 # MLflow tracking files
 ├── requirements.txt        # Project dependencies
-└── run_pipeline.py        # Main pipeline execution script
+
 ```
 
 ## Dataset
