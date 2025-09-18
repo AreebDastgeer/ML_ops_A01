@@ -1,0 +1,22 @@
+artifact_path: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/0/models/m-58147fbec2fc42138eee5b7c0f86afb7/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.3.2
+model_id: m-58147fbec2fc42138eee5b7c0f86afb7
+model_size_bytes: 836
+model_uuid: m-58147fbec2fc42138eee5b7c0f86afb7
+prompts: null
+run_id: 6a7c97cec0ba439ea8a1250e39ddb46d
+utc_time_created: '2025-09-18 16:59:06.082756'

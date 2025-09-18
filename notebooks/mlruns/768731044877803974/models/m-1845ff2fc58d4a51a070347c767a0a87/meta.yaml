@@ -1,0 +1,10 @@
+artifact_location: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/notebooks/mlruns/768731044877803974/models/m-1845ff2fc58d4a51a070347c767a0a87/artifacts
+creation_timestamp: 1758214103879
+experiment_id: '768731044877803974'
+last_updated_timestamp: 1758214109767
+model_id: m-1845ff2fc58d4a51a070347c767a0a87
+model_type: null
+name: logistic_regression
+source_run_id: 197824d4fb484960ab00197e901da895
+status: 2
+status_message: null

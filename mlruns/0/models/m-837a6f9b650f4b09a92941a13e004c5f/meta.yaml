@@ -1,0 +1,10 @@
+artifact_location: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/0/models/m-837a6f9b650f4b09a92941a13e004c5f/artifacts
+creation_timestamp: 1758214781076
+experiment_id: '0'
+last_updated_timestamp: 1758214785283
+model_id: m-837a6f9b650f4b09a92941a13e004c5f
+model_type: null
+name: support_vector_machine
+source_run_id: 91bb0bf5123549a698df2a3cd0ba677a
+status: 2
+status_message: null

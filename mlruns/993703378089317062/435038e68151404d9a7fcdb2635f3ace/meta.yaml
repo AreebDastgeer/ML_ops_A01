@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/993703378089317062/435038e68151404d9a7fcdb2635f3ace/artifacts
+end_time: 1758216042693
+entry_point_name: ''
+experiment_id: '993703378089317062'
+lifecycle_stage: active
+run_id: 435038e68151404d9a7fcdb2635f3ace
+run_name: Logistic Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758216035691
+status: 3
+tags: []
+user_id: qasimsmacbook

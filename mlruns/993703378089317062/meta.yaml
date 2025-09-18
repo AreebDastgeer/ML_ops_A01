@@ -1,0 +1,6 @@
+artifact_location: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/993703378089317062
+creation_time: 1758216035329
+experiment_id: '993703378089317062'
+last_update_time: 1758216035329
+lifecycle_stage: active
+name: iris-classification-pipeline

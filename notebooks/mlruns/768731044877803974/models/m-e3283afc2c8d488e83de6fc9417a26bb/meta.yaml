@@ -1,0 +1,10 @@
+artifact_location: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/notebooks/mlruns/768731044877803974/models/m-e3283afc2c8d488e83de6fc9417a26bb/artifacts
+creation_timestamp: 1758214132559
+experiment_id: '768731044877803974'
+last_updated_timestamp: 1758214137856
+model_id: m-e3283afc2c8d488e83de6fc9417a26bb
+model_type: null
+name: random_forest
+source_run_id: fbd64ef494ad4e8b937a03b76be677e9
+status: 2
+status_message: null

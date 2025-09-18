@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/0/91bb0bf5123549a698df2a3cd0ba677a/artifacts
+end_time: 1758214785293
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 91bb0bf5123549a698df2a3cd0ba677a
+run_name: Support Vector Machine
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758214781024
+status: 3
+tags: []
+user_id: qasimsmacbook

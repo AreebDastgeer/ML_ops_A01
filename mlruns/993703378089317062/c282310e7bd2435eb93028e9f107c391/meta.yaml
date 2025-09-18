@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/qasimsmacbook/Desktop/areeb_ml/mlops-assignment-1/mlruns/993703378089317062/c282310e7bd2435eb93028e9f107c391/artifacts
+end_time: 1758216399133
+entry_point_name: ''
+experiment_id: '993703378089317062'
+lifecycle_stage: active
+run_id: c282310e7bd2435eb93028e9f107c391
+run_name: Random Forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758216393532
+status: 3
+tags: []
+user_id: qasimsmacbook
