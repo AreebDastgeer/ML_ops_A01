@@ -93,7 +93,7 @@ Parameters:
 - Feature importance analysis shows petal dimensions are most significant
 
 #### Support Vector Machine Metrics
-![SVM MLflow Metrics](docs/images/mlflow_svm_metrics.png)
+![SVM MLflow Metrics](docs/images/abc3.png)
 *Performance metrics for SVM model demonstrating 96.7% accuracy across all metrics*
 
 Parameters:
